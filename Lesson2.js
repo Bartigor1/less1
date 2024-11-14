@@ -1,7 +1,7 @@
 //var exmapleValue = "Hello friend";
 //console.log(exmapleValue);
 
-let exmapleValue = "Привет!!!"
+let exmapleValue = "hello!!!"
 console.log(exmapleValue);
 
 //const
