@@ -82,4 +82,5 @@ console.log('#4 - ' +  `Точный возраст: ${calculateAge(dateOfBirth)
 console.log(`
 -----|||||-----
 `)
+
 //*** Lesson 3
