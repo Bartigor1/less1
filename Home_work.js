@@ -30,11 +30,11 @@ console.log("#1 - " +  myname + ', ' + age + ', ' + isStudent + ', ' + height + 
 //#2
 //Создайте переменные, содержащие явное undefined, неявное undefined и null, 
 //и выведите их типы в консоль через ||
-let explicitundefined
-let implicitundefined = undefined
-const fornull = null
+let explicitUndefined
+let implicitUndefined = undefined
+const forNull = null
 
-console.log("#2 - " +  explicitundefined + '||' + implicitundefined + '||' + fornull)
+console.log("#2 - " +  explicitUndefined + '||' + implicitUndefined + '||' + forNull)
 
 
 
@@ -43,11 +43,11 @@ console.log("#2 - " +  explicitundefined + '||' + implicitundefined + '||' + for
 //а затем вычислите и выведите в консоль ваш текущий возраст. Формат вывода:
 //Привет, мне {вычисленный возраст} лет.
 
-const yearofbirth = 1980
-let currentyear = 2024
-let myage = currentyear - yearofbirth
+const yearOfBirth = 1980
+let currentYear = 2024
+let myAge = currentYear - yearOfBirth
 
-console.log('#3 - ' +  'Привет, мне ' + myage + ' года.')
+console.log('#3 - ' +  'Привет, мне ' + myAge + ' года.')
 
 
 //#4*
