@@ -84,3 +84,86 @@ console.log(`
 `)
 
 //*** Lesson 3
+// Домашнее задание
+
+// Числа и округление:
+
+// Напишите код, который:
+// Присваивает переменной число с плавающей точкой, например, 7.3.
+const someNumber = 7.5
+// Создаёт три переменные, в которых будет храниться это число, округлённое:
+console.log(someNumber)
+console.log(Math.ceil(someNumber)) // В большую сторону.
+console.log(Math.floor(someNumber)) // В меньшую сторону.
+console.log(Math.round(someNumber)) // До ближайшего целого числа.
+// Выведите все три результата в консоль.
+
+
+// Генерация случайного числа:
+
+// Напишите код, который генерирует два случайных числа от 0 до 100 (без использования функций) и выводит:
+// Наибольшее из них.
+const randomNumber = Math.random() * 100
+const secondRandomNumber = Math.random() * 100
+console.log(randomNumber)
+console.log(secondRandomNumber)
+console.log(Math.max(randomNumber, secondRandomNumber))
+// Разницу между ними.
+console.log(randomNumber - secondRandomNumber)
+
+
+// Математические операции:
+// Задано два числа: 4 и 3. Вычислите:
+
+let x = 4
+let y = 3
+// Их сумму, произведение и частное.
+console.log(x + y)
+console.log(x * y)
+console.log(x / y)
+
+// Результат возведения первого числа во вторую степень.
+console.log(Math.pow(x, 2))
+// Квадратный корень из второго числа.
+console.log(Math.sqrt(y))
+// Выведите результаты на экран.
+
+
+// Работа со строками:
+
+// Напишите код, который:
+// Создаёт строку "Hello, JavaScript!" и выводит её длину.
+const str = '  Hello, JavaScript!  '
+console.log(str + ' = ' + str.length + ' символа') 
+// Переводит строку в верхний и нижний регистр, а затем выводит оба варианта.
+console.log(str.toUpperCase())
+console.log(str.toLowerCase())
+console.log(str.toUpperCase() + ' ' + str.toLowerCase())
+
+// Проверяет, содержится ли в строке слово "Java" (вывод true/false).
+console.log(str.includes("Java"))
+// Извлекает слово "JavaScript" и выводит его.
+console.log(str.substring(9, 19));  
+// Убирает пробелы в начале и конце строки, если они есть.
+console.log(str.trim())
+
+
+// Работа с датами:
+
+// Напишите код, который:
+// Создаёт переменную с текущей датой и временем.
+
+const today = new Date()
+
+console.log(today)
+
+// Получает и выводит отдельно:
+console.log(today.getFullYear())// Год.
+console.log(today.getMonth() + 1)// Месяц.
+console.log(today.getDate())// День месяца.
+console.log(today.getDay())// День недели.
+
+const nextYear = new Date(); 
+nextYear.setFullYear(today.getFullYear() + 1);
+nextYear.setMonth(0);
+console.log(nextYear) // Изменяет год на следующий, а месяц на январь. Выведите изменённую дату.
