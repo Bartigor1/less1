@@ -85,7 +85,7 @@ console.log(`
 
 //*** Lesson 3
 // Домашнее задание
-
+console.log('Home work - lesson 3')
 // Числа и округление:
 
 // Напишите код, который:
@@ -167,3 +167,11 @@ const nextYear = new Date();
 nextYear.setFullYear(today.getFullYear() + 1);
 nextYear.setMonth(0);
 console.log(nextYear) // Изменяет год на следующий, а месяц на январь. Выведите изменённую дату.
+
+
+console.log(`
+    -----|||||-----
+    `)
+    
+    //*** Lesson 4
+    console.log('Home work - lesson 4')
