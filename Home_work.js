@@ -1,9 +1,9 @@
 //*** Lesson 1
 // Домашнее задание будет заиметь репозиторий на гитхабе с проектом 
-//где будет первая ваша программа console.log("hello world!") если вы не сделали этого на уроке
+//где будет первая ваша программа console.log('hello world!') если вы не сделали этого на уроке
 
 console.log('Home work - lesson 1')
-console.log("Hello world!") 
+console.log('Hello world!') 
 console.log(`
 -----|||||-----
     `)
@@ -25,7 +25,7 @@ let hobby = 'mobile appdev'
 let favoriteNumber = 7
 let isGraduated
 //Выведите в консоль типы всех этих переменных через запятую.
-console.log("#1 - " +  myname + ', ' + age + ', ' + isStudent + ', ' + height + ', ' + hobby + ', ' + favoriteNumber + ', ' + isGraduated)
+console.log('#1 - ' +  myname + ', ' + age + ', ' + isStudent + ', ' + height + ', ' + hobby + ', ' + favoriteNumber + ', ' + isGraduated)
 
 //#2
 //Создайте переменные, содержащие явное undefined, неявное undefined и null, 
@@ -34,7 +34,7 @@ let explicitUndefined
 let implicitUndefined = undefined
 const forNull = null
 
-console.log("#2 - " +  explicitUndefined + '||' + implicitUndefined + '||' + forNull)
+console.log('#2 - ' +  explicitUndefined + '||' + implicitUndefined + '||' + forNull)
 
 
 
@@ -132,7 +132,7 @@ console.log(Math.sqrt(y))
 // Работа со строками:
 
 // Напишите код, который:
-// Создаёт строку "Hello, JavaScript!" и выводит её длину.
+// Создаёт строку 'Hello, JavaScript!' и выводит её длину.
 const str = '  Hello, JavaScript!  '
 console.log(str + ' = ' + str.length + ' символа') 
 // Переводит строку в верхний и нижний регистр, а затем выводит оба варианта.
@@ -140,9 +140,9 @@ console.log(str.toUpperCase())
 console.log(str.toLowerCase())
 console.log(str.toUpperCase() + ' ' + str.toLowerCase())
 
-// Проверяет, содержится ли в строке слово "Java" (вывод true/false).
-console.log(str.includes("Java"))
-// Извлекает слово "JavaScript" и выводит его.
+// Проверяет, содержится ли в строке слово 'Java' (вывод true/false).
+console.log(str.includes('Java'))
+// Извлекает слово 'JavaScript' и выводит его.
 console.log(str.substring(9, 19));  
 // Убирает пробелы в начале и конце строки, если они есть.
 console.log(str.trim())
@@ -175,3 +175,110 @@ console.log(`
     
     //*** Lesson 4
     console.log('Home work - lesson 4')
+    console.log('')
+
+    // Напишите функцию, которая принимает строку и проверяет, состоит ли она только из цифр.
+    console.log('#1 Напишите функцию, которая принимает строку и проверяет, состоит ли она только из цифр.')
+    function onlyDigits(str) {
+        const regex = /^\d+$/;
+//Регулярное выражение /^\d+$/ означает следующее:
+// ^ — начало строки,
+// \d+ — одна или более цифр,
+// $ — конец строки.
+        
+        // Проверяем строку с помощью регулярного выражения
+        return regex.test(str);
+    }
+    
+    console.log(onlyDigits('123'));   // true
+    console.log(onlyDigits('12a3'));  // false
+    console.log(onlyDigits('abc'));   // false
+    console.log('')
+
+    // Напишите функцию, которая принимает строку и возвращает количество букв
+    console.log('#2 Напишите функцию, которая принимает строку и возвращает количество букв')
+    
+    function countLetters(str) {
+        // Регулярное выражение для поиска всех букв латинского и кириллического алфавитов
+        const letters = /[a-zA-Zа-яА-Я]/g;
+// Регулярное выражение: /[a-zA-Zа-яА-Я]/g
+// [a-zA-Z] — ищет любые строчные и заглавные буквы латинского алфавита.
+// [а-яА-Я] — ищет любые строчные и заглавные буквы кириллического алфавита.
+// g — глобальный флаг, чтобы найти все совпадения в строке.
+        
+        // Используем match для получения массива совпадающих символов
+        const matches = str.match(letters);
+        
+        // Возвращаем длину массива совпадений, либо 0, если совпадения отсутствуют
+        return matches ? matches.length : 0;
+    }
+    
+    console.log(countLetters('Hello, World!'));       // 10
+    console.log(countLetters('Привет, Мир!'));        // 9
+    console.log(countLetters('123'));                 // 0
+    console.log(countLetters('Набор из букв и 3-х 123 цифр'));    // 17
+    console.log('')
+
+    // Напишите функцию, которая принимает строку и возвращает количество гласных букв
+    console.log('#3 Напишите функцию, которая принимает строку и возвращает количество гласных букв')
+
+    function countVovels(str) {
+        // Регулярное выражение для поиска всех букв латинского и кириллического алфавитов
+        const vovels = /[aeiouyаеёиоуыэюя]/gi;
+        // все глассные [aeiouyаеёиоуыэюя], /g - все совпадения, /i - нечуствительность к регистру
+        // Используем match для получения массива совпадающих символов
+        const matches = str.match(vovels);
+        
+        // Возвращаем длину массива совпадений, либо 0, если совпадения отсутствуют
+        return matches ? matches.length : 0;
+    }
+
+    console.log(countVovels('Hello, World!'));       // 3
+    console.log(countVovels('Привет, Мир!'));        // 3
+    console.log(countVovels('123'));                 // 0
+    console.log(countVovels('Набор из букв и 3-х 123 цифр'));    // 6
+    console.log('');
+
+    // Напишите функцию, которая принимает год и определяет, является ли он високосным.
+    console.log('#4 Напишите функцию, которая принимает год и определяет, является ли он високосным.');
+    function leapYear(year) {
+    // Условие для определения високосного года
+    return (year % 400 === 0) || ((year % 100 !== 0) && (year % 4 === 0));
+}
+
+    console.log(leapYear(new Date().getFullYear())); // true
+    console.log(leapYear(2025)); // false
+    console.log(leapYear(1893)); // false
+    console.log(leapYear(1980)); // true
+    console.log('');
+
+// Напишите функцию, которая принимает двузначное число и возвращает разницу между его цифрами.
+console.log('#5 Напишите функцию, которая принимает двузначное число и возвращает разницу между его цифрами.');
+function differenceBetweenDigits(num) {
+    // Разделяем число на две отдельные цифры
+    let firstDigit = Math.floor(num / 10);  // Первая цифра (деление на 10 и округления вниз)
+    let secondDigit = num % 10;             // Вторая цифра (остаток от деления на 10)
+
+    // Находим разницу между ними
+    return firstDigit - secondDigit;
+}
+console.log(differenceBetweenDigits(45));  // -1
+console.log(differenceBetweenDigits(99));  // 0
+console.log(differenceBetweenDigits(72));  // 5
+console.log('');
+
+// Напишите функцию, которая принимает число и проверяет, является ли оно зеркальным
+console.log('#6 Напишите функцию, которая принимает число и проверяет, является ли оно зеркальным');
+
+function mirrorNumber(num) {
+    
+    let reversedNum = String(num).split('').reverse().join(''); // Преобразует число в строку и переворачивает её
+    
+        return num == reversedNum; // сравнить 2 числа
+}
+
+// Примеры использования
+console.log(mirrorNumber(121));      // true
+console.log(mirrorNumber(123));      // false
+console.log(mirrorNumber(1312131));  // true
+console.log(mirrorNumber(-121));     // false (знак минус делает число несимметричным)
